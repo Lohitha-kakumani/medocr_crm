@@ -22,8 +22,13 @@
   --color-soft-teal: #DCEFEF;
   --color-deep-teal: #088178;
   --color-powder-teal: #B0D6D3;
+  --color-pale-mint: #CAFFF0;
   --color-deep-teal-green: #1A7A5E;
   --color-deep-teal-green-opacity: #1A7A5E26;
+  --color-deep-teal-green-opacity1: #1A7A5E4D;
+  --color-deep-teal-green-opacity2: #1A7A5E99;
+  --color-deep-teal-green-opacity3: #F0FFF2;
+  --color-deep-teal-green-opacity4: #1A7A5E08;
   --color-jungle-green: #1A7A5E59;
   --color-green-teal:#08817814;
   --color-light-teal: #DDEBE7;
@@ -545,6 +550,10 @@ body {
   @apply w-full max-w-[360px] h-[48px] rounded-[6px] text-sm text-white bg-dark-blue font-semibold cursor-pointer;
 }
 
+.support-btn-help4 {
+  @apply w-full max-w-[360px] h-[48px] rounded-[6px] text-sm text-white bg-deep-teal-green font-semibold cursor-pointer;
+}
+
 .referral-btn {
   @apply flex items-center gap-2 px-3 max-w-[280px] w-full h-[48px] rounded-[6px] border border-vivid-orange text-vivid-orange text-18-nr;
 }
@@ -637,6 +646,17 @@ body {
 .active-tab-support {
   @apply text-dodger-blue border-b-3 border-dodger-blue font-semibold;
 }
+
+.active-tab-support-pharmacy {
+  @apply text-deep-teal-green border-b-3 border-deep-teal-green font-semibold;
+}
+
+.active-tab-settings-pharmacy {
+  @apply text-deep-teal-green border-b-3 border-deep-teal-green font-semibold;
+}
+
+
+
 
 .active-tab-main {
   @apply font-semibold text-dodger-blue;
@@ -957,11 +977,41 @@ body {
   cursor: pointer;
 }
 
+
 .custom-radio-label-lab input[type="radio"]:checked+.custom-radio-lab::after {
   content: '';
   width: 10px;
   height: 10px;
   background-color: #007BFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Custom Radio - Lab */
+.custom-radio-label-pharmacy input[type="radio"] {
+  display: none;
+}
+
+.custom-radio-pharmacy {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #1A7A5E;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.custom-radio-label-pharmacy input[type="radio"]:checked+.custom-radio-lab::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #1A7A5E;
   border-radius: 50%;
   position: absolute;
   top: 50%;
