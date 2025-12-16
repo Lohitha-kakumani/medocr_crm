@@ -315,11 +315,13 @@
                     </div>
                 </nav>
             </aside>
-            <div
-                class="relative transition-all duration-300 main-content bg-slate-white h-full flex-1 flex flex-col gap-8 p-6 overflow-y-auto scroll">
-                <div class="bg-white p-6 rounded-lg shadow-md w-full">
+            <div class="relative transition-all duration-300 main-content bg-slate-white h-full flex-1 flex flex-col 
+                        gap-4 sm:gap-6 lg:gap-8 
+                        p-3 sm:p-4 lg:p-6
+                        overflow-y-auto scroll">
+                <div class="bg-white p-4 sm:p-5 lg:p-6 rounded-lg shadow-md w-full">
                     <div class="flex items-center gap-2">
-                        <img src="/public/images/order_icon.svg" alt="order icon" class="w-[24px] h-[24px]" />
+                        <img src="/public/images/order_icon.svg" alt="order icon" class="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px]" />
                         <p class="text-black font-semibold text-base">Orders</p>
                     </div>
                     <div
@@ -329,9 +331,9 @@
                         </span>
                     </div>
                     <!-- Tabs -->
-                    <div class="flex flex-col lg:flex-row lg:items-end justify-between w-full gap-4 mt-8">
+                    <div class="flex flex-col lg:flex-row lg:items-end justify-between w-full gap-3 sm:gap-4 mt-6 sm:mt-8">
                         <!-- Tabs Section -->
-                        <div class="tabs-section flex gap-4 whitespace-nowrap pt-2 lg:pt-0 flex-1 min-w-0">
+                        <div class="tabs-section flex gap-3 sm:gap-4 whitespace-nowrap pt-2 lg:pt-0 flex-1 min-w-0 overflow-x-auto lg:overflow-visible">
                             <button
                                 class="tab-btn-rewards active-tab-rewards text-sm sm:text-18-nr py-1.5 px-4 font-semibold cursor-pointer text-dark-gray border-b-2 border-deep-teal-green"
                                 data-tab="upcoming">
@@ -350,15 +352,15 @@
                                 Cancelled
                             </button>
                         </div>
-                        <!-- Search + Filter Section -->
-                        <div class="flex flex-row items-center gap-3 sm:gap-4 w-auto pb-1">
+                        <!-- Search Section -->
+                        <div class="flex items-center gap-3 sm:gap-4 w-full lg:w-auto pb-1">
                             <div
-                                class="w-[310px] h-[40px] rounded-[6px] bg-white border-[1px] border-blue-haze flex items-center px-2">
+                                class="w-full lg:w-[310px] h-[40px] rounded-[6px] bg-white border border-blue-haze flex items-center px-2">
                                 <span class="material-symbols-outlined text-dark-gray">
                                     search
                                 </span>
                                 <input type="text" placeholder="Search by Order ID"
-                                    class="w-full ml-1 border-none bg-transparent focus:outline-none font-regular text-base focus:ring-0 placeholder:text-medium-gray" />
+                                    class="w-full ml-1 border-none bg-transparent focus:outline-none font-regular text-sm sm:text-base focus:ring-0 placeholder:text-medium-gray" />
                             </div>
                         </div>
                     </div>
@@ -366,24 +368,24 @@
                     <div class="tab-content upcoming ">
 
                         <!-- === ORDER CARD 1=== -->
-                        <div class="order-card popup-btn mb-4 mt-6 rounded-lg shadow-(--box-shadow-5) overflow-hidden"
+                        <div class="order-card popup-btn mb-4 mt-4 sm:mt-6 rounded-lg shadow-(--box-shadow-5) overflow-hidden"
                             data-popup="order-details-popup">
                             <!-- Header -->
-                            <div class="bg-frost-green p-3 h-[63px]">
+                            <div class="bg-frost-green p-3 sm:p-4 min-h-[63px]">
                                 <p
-                                    class="w-[104px] rounded-[6px] text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
+                                    class="w-fit sm:w-[104px] rounded-[6px] text-[10px] sm:text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
                                     Order ID #8942
                                 </p>
                                 <div
-                                    class="flex items-center justify-between text-xs font-regular text-desaturated-blue">
+                                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] sm:text-xs font-regular text-desaturated-blue">
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/alarm.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         Today · 9:45 AM
                                     </span>
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/time.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         ETA : 20min
                                     </span>
                                 </div>
@@ -391,12 +393,12 @@
                             <!-- Body -->
                             <div class="bg-white">
                                 <!-- MEDICINE LIST -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/Medicinebg.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Medicines List</p>
-                                        <ul class="text-sm text-dark-grayish-blue font-semibold space-y-1">
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Medicines List</p>
+                                        <ul class="text-xs sm:text-sm text-dark-grayish-blue font-semibold space-y-1">
                                             <li>• Azithromycin 500mg x 1 strip</li>
                                             <li>• Glucose D Packets x 4</li>
                                             <li>• Multivitamin (2 strip)</li>
@@ -404,48 +406,48 @@
                                     </div>
                                 </div>
                                 <!-- CUSTOMER DETAILS -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/customer.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Customer Details</p>
-                                        <p class="text-sm text-dark-grayish-blue font-semibold">Hidden until Accepted
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Customer Details</p>
+                                        <p class="text-xs sm:text-sm text-dark-grayish-blue font-semibold">Hidden until Accepted
                                         </p>
                                     </div>
                                 </div>
                                 <!-- MARK AS COMPLETE -->
-                                <div class="flex justify-between items-center px-6 py-5 border-b border-gainsboro ">
-                                    <span class="text-sm font-semibold text-ebony">Mark as Complete</span>
-                                    <input type="checkbox" class="w-5 h-5 accent-[#00A85A] cursor-pointer" disabled>
+                                <div class="flex justify-between items-center px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro ">
+                                    <span class="text-xs sm:text-sm font-semibold text-ebony">Mark as Complete</span>
+                                    <input type="checkbox" class="w-4 h-4 sm:w-5 sm:h-5 accent-[#00A85A] cursor-pointer" disabled>
                                 </div>
                                 <!-- OTP -->
-                                <div class="px-6 py-5 border-b border-gainsboro ">
-                                    <p class="text-xs text-gray-500 font-medium mb-2">Delivery OTP</p>
-                                    <div class="flex items-center gap-2 ">
+                                <div class="px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro ">
+                                    <p class="text-[10px] sm:text-xs text-gray-500 font-medium mb-2">Delivery OTP</p>
+                                    <div class="flex felx-wrap items-center gap-2 ">
                                         <input type="text" maxlength="1"
-                                            class="w-10 h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
+                                            class="w-9 h-9 sm:w-10 sm:h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
                                             value="5">
                                         <input type="text" maxlength="1"
-                                            class="w-10 h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
+                                            class="w-9 h-9 sm:w-10 sm:h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
                                             value="0">
                                         <input type="text" maxlength="1"
-                                            class="w-10 h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
+                                            class="w-9 h-9 sm:w-10 sm:h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
                                             value="8">
                                         <input type="text" maxlength="1"
-                                            class="w-10 h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
+                                            class="w-9 h-9 sm:w-10 sm:h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
                                             value="4">
                                         <button
-                                            class="ml-auto w-[98px] h-[30px] border px-4 py-1 rounded-[8px] text-deep-teal-green font-medium text-sm border-deep-teal-green">Verify</button>
+                                            class="w-full sm:w-[98px] h-[32px] sm:ml-auto border px-4 py-1 rounded-[8px] text-deep-teal-green font-medium text-xs sm:text-sm border-deep-teal-green">Verify</button>
                                     </div>
                                 </div>
                                 <!-- BUTTONS -->
-                                <div class="flex gap-3 px-6 py-5 ">
+                                <div class="flex flex-col sm:flex-row gap-3 px-4 sm:px-6 py-4 sm:py-5 ">
                                     <button
-                                        class="border w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-sm font-medium">
+                                        class="w-full border sm:w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-xs sm:text-sm font-medium">
                                         View Invoice
                                     </button>
                                     <button
-                                        class="ml-auto w-[155px] h-[36px] px-4 rounded-[8px] text-white bg-deep-teal-green text-sm font-medium flex items-center justify-center gap-2">
+                                        class="w-full sm:ml-auto sm:w-[155px] h-[36px] px-4 rounded-[8px] text-white bg-deep-teal-green text-xs sm:text-sm font-medium flex items-center justify-center gap-2">
                                         <img src="/public/images/call.svg" alt="call icon" class="w-[20px] h-[20px]" />
                                         Call Customer
                                     </button>
@@ -751,25 +753,25 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- === ORDER CARD 2=== -->
-                        <div class="order-card popup-btn mb-4 mt-6 rounded-lg shadow-(--box-shadow-5) overflow-hidden"
+                        <!-- === ORDER CARD 2 === -->
+                        <div class="order-card popup-btn mb-4 mt-4 sm:mt-6 rounded-lg shadow-(--box-shadow-5) overflow-hidden"
                             data-popup="order-details-popup">
                             <!-- Header -->
-                            <div class="bg-frost-green p-3 h-[63px]">
+                            <div class="bg-frost-green p-3 sm:p-4 min-h-[63px]">
                                 <p
-                                    class="w-[104px] rounded-[6px] text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
+                                    class="w-fit sm:w-[104px] rounded-[6px] text-[10px] sm:text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
                                     Order ID #8942
                                 </p>
                                 <div
-                                    class="flex items-center justify-between text-xs font-regular text-desaturated-blue">
+                                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] sm:text-xs font-regular text-desaturated-blue">
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/alarm.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         Today · 9:45 AM
                                     </span>
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/time.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         ETA : 20min
                                     </span>
                                 </div>
@@ -777,12 +779,12 @@
                             <!-- Body -->
                             <div class="bg-white">
                                 <!-- MEDICINE LIST -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/Medicinebg.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Medicines List</p>
-                                        <ul class="text-sm text-dark-grayish-blue font-semibold space-y-1">
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Medicines List</p>
+                                        <ul class="text-xs sm:text-sm text-dark-grayish-blue font-semibold space-y-1">
                                             <li>• Azithromycin 500mg x 1 strip</li>
                                             <li>• Glucose D Packets x 4</li>
                                             <li>• Multivitamin (2 strip)</li>
@@ -790,48 +792,135 @@
                                     </div>
                                 </div>
                                 <!-- CUSTOMER DETAILS -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/customer.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Customer Details</p>
-                                        <p class="text-sm text-dark-grayish-blue font-semibold">Hidden until Accepted
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Customer Details</p>
+                                        <p class="text-xs sm:text-sm text-dark-grayish-blue font-semibold">Hidden until Accepted
                                         </p>
                                     </div>
                                 </div>
                                 <!-- MARK AS COMPLETE -->
-                                <div class="flex justify-between items-center px-6 py-5 border-b border-gainsboro ">
-                                    <span class="text-sm font-semibold text-ebony">Mark as Complete</span>
-                                    <input type="checkbox" class="w-5 h-5 accent-[#00A85A] cursor-pointer" disabled>
+                                <div class="flex justify-between items-center px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro ">
+                                    <span class="text-xs sm:text-sm font-semibold text-ebony">Mark as Complete</span>
+                                    <input type="checkbox" class="w-4 h-4 sm:w-5 sm:h-5 accent-[#00A85A] cursor-pointer" disabled>
                                 </div>
                                 <!-- OTP -->
-                                <div class="px-6 py-5 border-b border-gainsboro ">
-                                    <p class="text-xs text-gray-500 font-medium mb-2">Delivery OTP</p>
-                                    <div class="flex items-center gap-2 ">
+                                <div class="px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro ">
+                                    <p class="text-[10px] sm:text-xs text-gray-500 font-medium mb-2">Delivery OTP</p>
+                                    <div class="flex felx-wrap items-center gap-2 ">
                                         <input type="text" maxlength="1"
-                                            class="w-10 h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
+                                            class="w-9 h-9 sm:w-10 sm:h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
                                             value="5">
                                         <input type="text" maxlength="1"
-                                            class="w-10 h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
+                                            class="w-9 h-9 sm:w-10 sm:h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
                                             value="0">
                                         <input type="text" maxlength="1"
-                                            class="w-10 h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
+                                            class="w-9 h-9 sm:w-10 sm:h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
                                             value="8">
                                         <input type="text" maxlength="1"
-                                            class="w-10 h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
+                                            class="w-9 h-9 sm:w-10 sm:h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
                                             value="4">
                                         <button
-                                            class="ml-auto w-[98px] h-[30px] border px-4 py-1 rounded-[8px] text-deep-teal-green font-medium text-sm border-deep-teal-green">Verify</button>
+                                            class="w-full sm:w-[98px] h-[32px] sm:ml-auto border px-4 py-1 rounded-[8px] text-deep-teal-green font-medium text-xs sm:text-sm border-deep-teal-green">Verify</button>
                                     </div>
                                 </div>
                                 <!-- BUTTONS -->
-                                <div class="flex gap-3 px-6 py-5 ">
+                                <div class="flex flex-col sm:flex-row gap-3 px-4 sm:px-6 py-4 sm:py-5 ">
                                     <button
-                                        class="border w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-sm font-medium">
+                                        class="w-full border sm:w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-xs sm:text-sm font-medium">
                                         View Invoice
                                     </button>
                                     <button
-                                        class="ml-auto w-[155px] h-[36px] px-4 rounded-[8px] text-white bg-deep-teal-green text-sm font-medium flex items-center justify-center gap-2">
+                                        class="w-full sm:ml-auto sm:w-[155px] h-[36px] px-4 rounded-[8px] text-white bg-deep-teal-green text-xs sm:text-sm font-medium flex items-center justify-center gap-2">
+                                        <img src="/public/images/call.svg" alt="call icon" class="w-[20px] h-[20px]" />
+                                        Call Customer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- === ORDER CARD 3 === -->
+                        <div class="order-card popup-btn mb-4 mt-4 sm:mt-6 rounded-lg shadow-(--box-shadow-5) overflow-hidden"
+                            data-popup="order-details-popup">
+                            <!-- Header -->
+                            <div class="bg-frost-green p-3 sm:p-4 min-h-[63px]">
+                                <p
+                                    class="w-fit sm:w-[104px] rounded-[6px] text-[10px] sm:text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
+                                    Order ID #8942
+                                </p>
+                                <div
+                                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] sm:text-xs font-regular text-desaturated-blue">
+                                    <span class="flex items-center gap-1">
+                                        <img src="/public/images/alarm.svg" alt="calendar icon"
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
+                                        Today · 9:45 AM
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <img src="/public/images/time.svg" alt="calendar icon"
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
+                                        ETA : 20min
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Body -->
+                            <div class="bg-white">
+                                <!-- MEDICINE LIST -->
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
+                                    <img src="/public/images/Medicinebg.svg" alt="calendar icon"
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
+                                    <div>
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Medicines List</p>
+                                        <ul class="text-xs sm:text-sm text-dark-grayish-blue font-semibold space-y-1">
+                                            <li>• Azithromycin 500mg x 1 strip</li>
+                                            <li>• Glucose D Packets x 4</li>
+                                            <li>• Multivitamin (2 strip)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- CUSTOMER DETAILS -->
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
+                                    <img src="/public/images/customer.svg" alt="calendar icon"
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
+                                    <div>
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Customer Details</p>
+                                        <p class="text-xs sm:text-sm text-dark-grayish-blue font-semibold">Hidden until Accepted
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- MARK AS COMPLETE -->
+                                <div class="flex justify-between items-center px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro ">
+                                    <span class="text-xs sm:text-sm font-semibold text-ebony">Mark as Complete</span>
+                                    <input type="checkbox" class="w-4 h-4 sm:w-5 sm:h-5 accent-[#00A85A] cursor-pointer" disabled>
+                                </div>
+                                <!-- OTP -->
+                                <div class="px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro ">
+                                    <p class="text-[10px] sm:text-xs text-gray-500 font-medium mb-2">Delivery OTP</p>
+                                    <div class="flex felx-wrap items-center gap-2 ">
+                                        <input type="text" maxlength="1"
+                                            class="w-9 h-9 sm:w-10 sm:h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
+                                            value="5">
+                                        <input type="text" maxlength="1"
+                                            class="w-9 h-9 sm:w-10 sm:h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
+                                            value="0">
+                                        <input type="text" maxlength="1"
+                                            class="w-9 h-9 sm:w-10 sm:h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
+                                            value="8">
+                                        <input type="text" maxlength="1"
+                                            class="w-9 h-9 sm:w-10 sm:h-10 rounded-md border text-center font-bold text-lg bg-white border-gray-300"
+                                            value="4">
+                                        <button
+                                            class="w-full sm:w-[98px] h-[32px] sm:ml-auto border px-4 py-1 rounded-[8px] text-deep-teal-green font-medium text-xs sm:text-sm border-deep-teal-green">Verify</button>
+                                    </div>
+                                </div>
+                                <!-- BUTTONS -->
+                                <div class="flex flex-col sm:flex-row gap-3 px-4 sm:px-6 py-4 sm:py-5 ">
+                                    <button
+                                        class="w-full border sm:w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-xs sm:text-sm font-medium">
+                                        View Invoice
+                                    </button>
+                                    <button
+                                        class="w-full sm:ml-auto sm:w-[155px] h-[36px] px-4 rounded-[8px] text-white bg-deep-teal-green text-xs sm:text-sm font-medium flex items-center justify-center gap-2">
                                         <img src="/public/images/call.svg" alt="call icon" class="w-[20px] h-[20px]" />
                                         Call Customer
                                     </button>
@@ -841,24 +930,24 @@
                     </div>
                     <div class="tab-content completed hidden">
                         <!-- === ORDER CARD 1=== -->
-                        <div class="order-card popup-btn mb-4 mt-6 rounded-lg shadow-(--box-shadow-5) overflow-hidden"
+                        <div class="order-card popup-btn mb-4 mt-4 sm:mt-6 rounded-lg shadow-(--box-shadow-5) overflow-hidden"
                             data-popup="order-completed-popup">
                             <!-- Header -->
-                            <div class="bg-frost-green p-3 h-[63px]">
+                            <div class="bg-frost-green sm:p-4 p-3 min-h-[63px]">
                                 <p
-                                    class="w-[104px] rounded-[6px] text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
+                                    class="w-fit sm:w-[104px] rounded-[6px] text-[10px] sm:text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
                                     Order ID #8942
                                 </p>
                                 <div
-                                    class="flex items-center justify-between text-xs font-regular text-desaturated-blue">
+                                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] sm:text-xs font-regular text-desaturated-blue">
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/alarm.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         Today · 9:45 AM
                                     </span>
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/time.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         ETA : 20min
                                     </span>
                                 </div>
@@ -866,12 +955,12 @@
                             <!-- Body -->
                             <div class="bg-white">
                                 <!-- MEDICINE LIST -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/Medicinebg.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Medicines List</p>
-                                        <ul class="text-sm text-dark-grayish-blue font-semibold space-y-1">
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Medicines List</p>
+                                        <ul class="text-xs sm:text-sm text-dark-grayish-blue font-semibold space-y-1">
                                             <li>• Azithromycin 500mg x 1 strip</li>
                                             <li>• Glucose D Packets x 4</li>
                                             <li>• Multivitamin (2 strip)</li>
@@ -879,18 +968,18 @@
                                     </div>
                                 </div>
                                 <!-- CUSTOMER DETAILS -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/customer.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Customer Details</p>
-                                        <p class="text-sm text-dark-grayish-blue font-semibold">Ahmed R </p>
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Customer Details</p>
+                                        <p class="text-xs sm:text-sm text-dark-grayish-blue font-semibold">Ahmed R </p>
                                     </div>
                                 </div>
                                 <!-- BUTTONS -->
-                                <div class="flex gap-3 px-6 py-5 items-center text-center justify-center ">
+                                <div class="flex px-4 sm:px-6 py-4 justify-center ">
                                     <button
-                                        class="border w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-sm font-medium">
+                                        class="w-full border sm:w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-xs sm:text-sm font-medium">
                                         View Invoice
                                     </button>
                                 </div>
@@ -1112,25 +1201,25 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- === ORDER CARD 2 === -->
-                        <div class="order-card popup-btn mb-4 mt-6 rounded-lg shadow-(--box-shadow-5) overflow-hidden"
+                        <!-- === ORDER CARD 2=== -->
+                        <div class="order-card popup-btn mb-4 mt-4 sm:mt-6 rounded-lg shadow-(--box-shadow-5) overflow-hidden"
                             data-popup="order-completed-popup">
                             <!-- Header -->
-                            <div class="bg-frost-green p-3 h-[63px]">
+                            <div class="bg-frost-green sm:p-4 p-3 min-h-[63px]">
                                 <p
-                                    class="w-[104px] rounded-[6px] text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
+                                    class="w-fit sm:w-[104px] rounded-[6px] text-[10px] sm:text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
                                     Order ID #8942
                                 </p>
                                 <div
-                                    class="flex items-center justify-between text-xs font-regular text-desaturated-blue">
+                                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] sm:text-xs font-regular text-desaturated-blue">
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/alarm.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         Today · 9:45 AM
                                     </span>
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/time.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         ETA : 20min
                                     </span>
                                 </div>
@@ -1138,12 +1227,12 @@
                             <!-- Body -->
                             <div class="bg-white">
                                 <!-- MEDICINE LIST -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/Medicinebg.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Medicines List</p>
-                                        <ul class="text-sm text-dark-grayish-blue font-semibold space-y-1">
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Medicines List</p>
+                                        <ul class="text-xs sm:text-sm text-dark-grayish-blue font-semibold space-y-1">
                                             <li>• Azithromycin 500mg x 1 strip</li>
                                             <li>• Glucose D Packets x 4</li>
                                             <li>• Multivitamin (2 strip)</li>
@@ -1151,42 +1240,42 @@
                                     </div>
                                 </div>
                                 <!-- CUSTOMER DETAILS -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/customer.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Customer Details</p>
-                                        <p class="text-sm text-dark-grayish-blue font-semibold">Ahmed R </p>
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Customer Details</p>
+                                        <p class="text-xs sm:text-sm text-dark-grayish-blue font-semibold">Ahmed R </p>
                                     </div>
                                 </div>
                                 <!-- BUTTONS -->
-                                <div class="flex gap-3 px-6 py-5 items-center text-center justify-center ">
+                                <div class="flex px-4 sm:px-6 py-4 justify-center ">
                                     <button
-                                        class="border w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-sm font-medium">
+                                        class="w-full border sm:w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-xs sm:text-sm font-medium">
                                         View Invoice
                                     </button>
                                 </div>
                             </div>
                         </div>
                         <!-- === ORDER CARD 3 === -->
-                        <div class="order-card popup-btn mb-4 mt-6 rounded-lg shadow-(--box-shadow-5) overflow-hidden"
+                        <div class="order-card popup-btn mb-4 mt-4 sm:mt-6 rounded-lg shadow-(--box-shadow-5) overflow-hidden"
                             data-popup="order-completed-popup">
                             <!-- Header -->
-                            <div class="bg-frost-green p-3 h-[63px]">
+                            <div class="bg-frost-green sm:p-4 p-3 min-h-[63px]">
                                 <p
-                                    class="w-[104px] rounded-[6px] text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
+                                    class="w-fit sm:w-[104px] rounded-[6px] text-[10px] sm:text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
                                     Order ID #8942
                                 </p>
                                 <div
-                                    class="flex items-center justify-between text-xs font-regular text-desaturated-blue">
+                                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] sm:text-xs font-regular text-desaturated-blue">
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/alarm.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         Today · 9:45 AM
                                     </span>
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/time.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         ETA : 20min
                                     </span>
                                 </div>
@@ -1194,12 +1283,12 @@
                             <!-- Body -->
                             <div class="bg-white">
                                 <!-- MEDICINE LIST -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/Medicinebg.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Medicines List</p>
-                                        <ul class="text-sm text-dark-grayish-blue font-semibold space-y-1">
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Medicines List</p>
+                                        <ul class="text-xs sm:text-sm text-dark-grayish-blue font-semibold space-y-1">
                                             <li>• Azithromycin 500mg x 1 strip</li>
                                             <li>• Glucose D Packets x 4</li>
                                             <li>• Multivitamin (2 strip)</li>
@@ -1207,18 +1296,18 @@
                                     </div>
                                 </div>
                                 <!-- CUSTOMER DETAILS -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/customer.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Customer Details</p>
-                                        <p class="text-sm text-dark-grayish-blue font-semibold">Ahmed R </p>
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Customer Details</p>
+                                        <p class="text-xs sm:text-sm text-dark-grayish-blue font-semibold">Ahmed R </p>
                                     </div>
                                 </div>
                                 <!-- BUTTONS -->
-                                <div class="flex gap-3 px-6 py-5 items-center text-center justify-center ">
+                                <div class="flex px-4 sm:px-6 py-4 justify-center ">
                                     <button
-                                        class="border w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-sm font-medium">
+                                        class="w-full border sm:w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-xs sm:text-sm font-medium">
                                         View Invoice
                                     </button>
                                 </div>
@@ -1232,19 +1321,19 @@
                             <!-- Header -->
                             <div class="bg-frost-green p-3 h-[63px]">
                                 <p
-                                    class="w-[104px] rounded-[6px] text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
+                                    class="w-fit sm:w-[104px] rounded-[6px] text-[10px] sm:text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
                                     Order ID #8942
                                 </p>
                                 <div
-                                    class="flex items-center justify-between text-xs font-regular text-desaturated-blue">
+                                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] sm:text-xs font-regular text-desaturated-blue">
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/alarm.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         Today · 9:45 AM
                                     </span>
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/time.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         ETA : 20min
                                     </span>
                                 </div>
@@ -1252,12 +1341,12 @@
                             <!-- Body -->
                             <div class="bg-white">
                                 <!-- MEDICINE LIST -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/Medicinebg.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Medicines List</p>
-                                        <ul class="text-sm text-dark-grayish-blue font-semibold space-y-1">
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Medicines List</p>
+                                        <ul class="text-xs sm:text-sm text-dark-grayish-blue font-semibold space-y-1">
                                             <li>• Azithromycin 500mg x 1 strip</li>
                                             <li>• Glucose D Packets x 4</li>
                                             <li>• Multivitamin (2 strip)</li>
@@ -1265,18 +1354,18 @@
                                     </div>
                                 </div>
                                 <!-- CUSTOMER DETAILS -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/customer.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Customer Details</p>
-                                        <p class="text-sm text-dark-grayish-blue font-semibold">Ahmed R </p>
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Customer Details</p>
+                                        <p class="text-xs sm:text-sm text-dark-grayish-blue font-semibold">Ahmed R </p>
                                     </div>
                                 </div>
                                 <!-- BUTTONS -->
-                                <div class="flex gap-3 px-6 py-5 items-center text-center justify-center ">
+                                <div class="flex justify-center px-4 sm:px-6 py-4 sm:py-5">
                                     <button
-                                        class="border w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-sm font-medium">
+                                        class="w-full border sm:w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-xs sm:text-sm font-medium">
                                         View Invoice
                                     </button>
                                 </div>
@@ -1517,19 +1606,19 @@
                             <!-- Header -->
                             <div class="bg-frost-green p-3 h-[63px]">
                                 <p
-                                    class="w-[104px] rounded-[6px] text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
+                                    class="w-fit sm:w-[104px] rounded-[6px] text-[10px] sm:text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
                                     Order ID #8942
                                 </p>
                                 <div
-                                    class="flex items-center justify-between text-xs font-regular text-desaturated-blue">
+                                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] sm:text-xs font-regular text-desaturated-blue">
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/alarm.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         Today · 9:45 AM
                                     </span>
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/time.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         ETA : 20min
                                     </span>
                                 </div>
@@ -1537,12 +1626,12 @@
                             <!-- Body -->
                             <div class="bg-white">
                                 <!-- MEDICINE LIST -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/Medicinebg.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Medicines List</p>
-                                        <ul class="text-sm text-dark-grayish-blue font-semibold space-y-1">
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Medicines List</p>
+                                        <ul class="text-xs sm:text-sm text-dark-grayish-blue font-semibold space-y-1">
                                             <li>• Azithromycin 500mg x 1 strip</li>
                                             <li>• Glucose D Packets x 4</li>
                                             <li>• Multivitamin (2 strip)</li>
@@ -1550,42 +1639,42 @@
                                     </div>
                                 </div>
                                 <!-- CUSTOMER DETAILS -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/customer.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Customer Details</p>
-                                        <p class="text-sm text-dark-grayish-blue font-semibold">Ahmed R </p>
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Customer Details</p>
+                                        <p class="text-xs sm:text-sm text-dark-grayish-blue font-semibold">Ahmed R </p>
                                     </div>
                                 </div>
                                 <!-- BUTTONS -->
-                                <div class="flex gap-3 px-6 py-5 items-center text-center justify-center ">
+                                <div class="flex justify-center px-4 sm:px-6 py-4 sm:py-5">
                                     <button
-                                        class="border w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-sm font-medium">
+                                        class="w-full border sm:w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-xs sm:text-sm font-medium">
                                         View Invoice
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        <!-- === ORDER CARD 3=== -->
+                        <!-- === ORDER CARD 3 === -->
                         <div class="order-card popup-btn mb-4 mt-6 rounded-lg shadow-(--box-shadow-5) overflow-hidden"
                             data-popup="order-missed-popup">
                             <!-- Header -->
                             <div class="bg-frost-green p-3 h-[63px]">
                                 <p
-                                    class="w-[104px] rounded-[6px] text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
+                                    class="w-fit sm:w-[104px] rounded-[6px] text-[10px] sm:text-xs p-1 font-medium text-electric-purple bg-lavendar-dream mb-1">
                                     Order ID #8942
                                 </p>
                                 <div
-                                    class="flex items-center justify-between text-xs font-regular text-desaturated-blue">
+                                    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] sm:text-xs font-regular text-desaturated-blue">
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/alarm.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         Today · 9:45 AM
                                     </span>
                                     <span class="flex items-center gap-1">
                                         <img src="/public/images/time.svg" alt="calendar icon"
-                                            class="w-[12px] h-[12px]" />
+                                            class="w-[10px] h-[10px] sm:w-[12px] sm:h-[12px]" />
                                         ETA : 20min
                                     </span>
                                 </div>
@@ -1593,12 +1682,12 @@
                             <!-- Body -->
                             <div class="bg-white">
                                 <!-- MEDICINE LIST -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/Medicinebg.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Medicines List</p>
-                                        <ul class="text-sm text-dark-grayish-blue font-semibold space-y-1">
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Medicines List</p>
+                                        <ul class="text-xs sm:text-sm text-dark-grayish-blue font-semibold space-y-1">
                                             <li>• Azithromycin 500mg x 1 strip</li>
                                             <li>• Glucose D Packets x 4</li>
                                             <li>• Multivitamin (2 strip)</li>
@@ -1606,18 +1695,18 @@
                                     </div>
                                 </div>
                                 <!-- CUSTOMER DETAILS -->
-                                <div class="flex items-start gap-3 px-6 py-5 border-b border-gainsboro">
+                                <div class="flex items-start gap-3 px-4 sm:px-6 py-4 sm:py-5 border-b border-gainsboro">
                                     <img src="/public/images/customer.svg" alt="calendar icon"
-                                        class="w-[37px] h-[37px]" />
+                                        class="w-[32px] h-[32px] sm:w-[37px] sm:h-[37px]" />
                                     <div>
-                                        <p class="font-regular text-foggy-silver mb-2 text-xs">Customer Details</p>
-                                        <p class="text-sm text-dark-grayish-blue font-semibold">Ahmed R </p>
+                                        <p class="font-regular text-foggy-silver mb-2 text-[10px] sm:text-xs">Customer Details</p>
+                                        <p class="text-xs sm:text-sm text-dark-grayish-blue font-semibold">Ahmed R </p>
                                     </div>
                                 </div>
                                 <!-- BUTTONS -->
-                                <div class="flex gap-3 px-6 py-5 items-center text-center justify-center ">
+                                <div class="flex justify-center px-4 sm:px-6 py-4 sm:py-5">
                                     <button
-                                        class="border w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-sm font-medium">
+                                        class="w-full border sm:w-[155px] px-4 py-2 rounded-[8px] text-deep-teal border-dark-cyan text-xs sm:text-sm font-medium">
                                         View Invoice
                                     </button>
                                 </div>
