@@ -30,6 +30,7 @@
   --color-deep-teal-green-opacity3: #F0FFF2;
   --color-deep-teal-green-opacity4: #1A7A5E08;
   --color-jungle-green: #1A7A5E59;
+  --color-jungle-navy:#101828;
   --color-green-teal:#08817814;
   --color-light-teal: #DDEBE7;
   /* Cloud & Frost Colors */
@@ -97,6 +98,7 @@
   --color-light-gray4: #12345608;
   --color-lightest-gray: #F6F6F6;
   --color-medium-gray: #929292;
+  --color-medium-dark-blue:#091A7A
   --color-slate-gray: #79747E;
   --color-steel-gray: #7E818C;
   --color-jet-black: #1F1F1F;
@@ -201,6 +203,7 @@
 
   /* Yellow & Gold Variants */
   --color-golden-yellow: #DAC568;
+  --color-golden-gold:#F0B100;
   --color-golden-yellow: #FFCC00;
   --color-star-yellow: #FFDB1E;
   --color-sunglow: #F2AE144D;
@@ -249,6 +252,7 @@
   --color-smoke-gray: #3C3C434D;
   --color-deep-navy: #1C2B52;
   --color-inactive-orange: #FFD4D0;
+  --color-safety-orange:#FF6900;
   --color-icy-fog: #E4E5E7;
   --color-rosewater: #FAE4E2;
   --color-error: #B3261E;
@@ -1338,6 +1342,7 @@ input[type="number"] {
   background-image: url("/public/images/heatmap.png"); /* change image */
   background-size: cover;
   background-position: center;
+  background-size: contain; 
   background-repeat: no-repeat;
   box-shadow: var(--box-shadow-5);
   border-radius: 12px;
