@@ -177,8 +177,10 @@
   --color-pale-blue: #E9EEF6;
   --color-mist-blue: #E7EBEE;
   --color-frosted-sky: #DAE7FAD9;
-  --color-desaturated-blue: #1E2939;
-  --color-dark-grayish-blue: #4A5565;
+  --color-desaturated-blue:#1E2939;
+  --color-dark-grayish-blue:#4A5565;
+  --color-premium-yellow: #FDC700;
+  --color-premium-light-blue:#D1E7FF;
 
   /* Purple & Violet Variants */
   --color-royal-purple: #3A0CA3;
@@ -257,43 +259,44 @@
   --color-frost-white: #F3F4F6;
   --color-mint-leaf: #22C55E;
   --color-bright-red: #EF4444;
-  --color-dark-navy: #101828;
-  --color-charcoal-gray: #4A5565;
-  --color-crimson-red: #FB2C36;
-  --color-deep-amber: #BB4D004D;
-  --color-soft-ivory: #FFFBEB;
-  --color-copper-orange: #BB4D00;
-  --color-cinnamon-orange: #BB4D00CC;
-  --color-warm-tangerine: #E17100;
-  --color-pastel-seafoam: #B9F8CF1A;
-  --color-blue-charcoal: #212B36;
-  --color-seafoam: #B9F8CF;
-  --color-soft-pastel-mint: #DCFCE780;
-  --color-pastel-mint: #DCFCE7;
-  --color-cool-ice-gray: #DFE3E8;
-  --color-cool-steel-blue: #919EAB52;
-  --color-ocean-teal: #08817814;
-  --color-pale-ice-blue: #C8DAEA;
-  --color-slate-steel-blue: #62748E;
-  --color-forest-green: #0082360D;
-  --color-tropical-green: #1A7A5E33;
-  --color-lime-green: #84CC16;
-  --color-mint-emerald: #10B981;
-  --color-cerise-red: #D93F66;
-  --color-bluish-gray: #6A7282;
-  --color-blush-pink: #FFE2E2;
-  --color-rose-mist: #C10007;
-  --color-sunrise-yellow: #F0B100;
-  --color-light-yellow: #FEF9C2;
-  --color-dark-yellow: #A65F00;
-  --color-electric-blue: #2A5BDA;
-  --color-pale-gray: #D3D3D3;
-  --color-mustard-yellow: #FFCC48;
-  --color-dark-periwinkle: #323357;
-  --color-bright-royal-blue: #155DFC;
-  --color-vivid-sapphire-blue: #1447E6;
-  --color-dark-slate-blue-gray: #364153;
-  --color-shamrock-green: #00A63E;
+  --color-dark-navy:#101828;
+  --color-charcoal-gray:#4A5565;
+  --color-crimson-red:#FB2C36;
+  --color-deep-amber:#BB4D004D;
+  --color-soft-ivory:#FFFBEB;
+  --color-copper-orange:#BB4D00;
+  --color-cinnamon-orange:#BB4D00CC;
+  --color-warm-tangerine:#E17100;
+  --color-pastel-seafoam:#B9F8CF1A;
+  --color-blue-charcoal:#212B36;
+  --color-seafoam:#B9F8CF;
+  --color-soft-pastel-mint:#DCFCE780;
+  --color-pastel-mint:#DCFCE7;
+  --color-cool-ice-gray:#DFE3E8;
+  --color-cool-steel-blue:#919EAB52;
+  --color-ocean-teal:#08817814;
+  --color-pale-ice-blue:#C8DAEA;
+  --color-slate-steel-blue:#62748E;
+  --color-forest-green:#0082360D;
+  --color-tropical-green:#1A7A5E33;
+  --color-lime-green:#84CC16;
+  --color-mint-emerald:#10B981;
+  --color-cerise-red:#D93F66;
+  --color-bluish-gray:#6A7282;
+  --color-blush-pink:#FFE2E2;
+  --color-rose-mist:#C10007;
+  --color-sunrise-yellow:#F0B100;
+  --color-light-yellow:#FEF9C2;
+  --color-dark-yellow:#A65F00;
+  --color-electric-blue:#2A5BDA;
+  --color-pale-gray:#D3D3D3;
+  --color-mustard-yellow:#FFCC48;
+  --color-dark-periwinkle:#323357;
+  --color-bright-royal-blue:#155DFC;
+  --color-vivid-sapphire-blue:#1447E6;
+  --color-dark-slate-blue-gray:#364153;
+  --color-shamrock-green:#00A63E;
+  --color-popup-transparent: #00000040;
   --color-muted-gray: #98989852;
   --color-prussian-blue:#0836840D;
   --color-safety-orange:#FF6900;
@@ -313,7 +316,9 @@
   --box-shadow-13: 1px 1px 8px 0px #00000014 inset, -1px -1px 8px 0px #00000014 inset;
   --box-shadow-14: 4px -4px 10px 1px #00000026;
   --box-shadow-15: 0px 4px 10px 0px #FFCC4887;
-
+  --shadow-16: 0px 8px 10px -6px #0000001A, 0px 20px 25px -5px #0000001A;
+  --shadow-17: 4px 4px 10px 0px #00000033;
+  
 
   /* Radio Button Colors */
   --radio-border-color: teal;
@@ -1338,6 +1343,68 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+/* Tab CSS */
+
+.tabs {
+  @apply sticky top-0 bg-[#F4F6F8] rounded-lg;
+}
+
+
+.tabs .flex {
+  @apply relative;
+}
+
+.tab-btn {
+  @apply py-2.5 px-3 sm:px-7 text-nowrap cursor-pointer relative z-10 transition-colors duration-300 text-black text-sm font-semibold shadow-[#00000026];
+}
+
+.tab-btn.active {
+  @apply my-1 text-black;
+}
+
+
+.tab-indicator {
+  @apply absolute bg-white rounded-md shadow-[4px_4px_10px_0px_#00000026] transition-all duration-500 ease-out pointer-events-none z-0;
+}
+
+.step-circle {
+  @apply w-8 lg:w-[38.4px] h-8 lg:h-[38.4px] rounded-full flex items-center justify-center text-xs bg-[#E5E7EB] text-bluish-gray lg:text-[14.4px] font-bold;
+  transition: all 0.3s ease;
+}
+
+.active-step {
+  @apply bg-primary-blue text-white text-xs lg:text-lg font-bold w-8 lg:w-12 h-8 lg:h-12;
+  transform: scale(1.15);
+}
+
+.active-heading {
+  @apply text-primary-blue font-semibold;
+}
+
+
+.step-content {
+  animation: fadeSlide 0.35s ease;
+}
+
+.step-line {
+  @apply flex-1 h-[2px] bg-[#E5E7EB] mx-2;
+}
+
+.step-line.active-line {
+  background-color: #2563eb;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .doctor-report-shadow {
   background-image: url("/public/images/heatmap.png");
   /* change image */

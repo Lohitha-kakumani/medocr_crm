@@ -222,3 +222,14 @@ $('.trigger-time').on('click', function () {
       }
     });    
 })
+
+$('.open-popup').on('click', function () {
+  const targetPopup = $(this).data('target');
+  $('.popup-overlay').removeClass('flex').addClass('hidden');
+  $(`.${targetPopup}`).removeClass('hidden').addClass('flex');
+});
+
+// Close popup
+$(document).on('click', ' .close-icon', function () {
+  $(this).closest('.popup-overlay').removeClass('flex').addClass('hidden');
+});
