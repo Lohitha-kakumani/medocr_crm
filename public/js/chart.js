@@ -298,92 +298,92 @@ $(document).ready(function () {
 });
 
 // Consolidation calendar
-$(document).ready(function () {
+// $(document).ready(function () {
 
-  let consolidationDate = "Today";
+//   let consolidationDate = "Today";
 
-  /* ---- TOGGLE CONSOLIDATION CALENDAR ---- */
-  $(".consolidationCalendarToggle").on("click", function (e) {
-    e.stopPropagation();
-    $(".consolidationCalendarPopup").toggleClass("hidden");
-  });
+//   /* ---- TOGGLE CONSOLIDATION CALENDAR ---- */
+//   $(".consolidationCalendarToggle").on("click", function (e) {
+//     e.stopPropagation();
+//     $(".consolidationCalendarPopup").toggleClass("hidden");
+//   });
 
-  /* ---- SELECT OPTION (KEEP POPUP OPEN) ---- */
-  $(".consolidation-cal-option").on("click", function (e) {
-    e.stopPropagation(); // 🔑 critical
+//   /* ---- SELECT OPTION (KEEP POPUP OPEN) ---- */
+//   $(".consolidation-cal-option").on("click", function (e) {
+//     e.stopPropagation(); // 🔑 critical
 
-    consolidationDate = $(this).data("value");
+//     consolidationDate = $(this).data("value");
 
-    // reset checks
-    $(".consolidation-cal-option span:first-child")
-      .removeClass("text-dodger-blue")
-      .addClass("text-light-gray");
+//     // reset checks
+//     $(".consolidation-cal-option span:first-child")
+//       .removeClass("text-dodger-blue")
+//       .addClass("text-light-gray");
 
-    // activate selected
-    $(this).find("span:first-child")
-      .removeClass("text-light-gray")
-      .addClass("text-dodger-blue");
+//     // activate selected
+//     $(this).find("span:first-child")
+//       .removeClass("text-light-gray")
+//       .addClass("text-dodger-blue");
 
-    // ❌ do NOT close popup here
-  });
+//     // ❌ do NOT close popup here
+//   });
 
-  /* ---- CLOSE ONLY ON OUTSIDE CLICK ---- */
-  $(document).on("click", function () {
-    $(".consolidationCalendarPopup").addClass("hidden");
-  });
+//   /* ---- CLOSE ONLY ON OUTSIDE CLICK ---- */
+//   $(document).on("click", function () {
+//     $(".consolidationCalendarPopup").addClass("hidden");
+//   });
 
-  $(".consolidationCalendarPopup").on("click", function (e) {
-    e.stopPropagation();
-  });
+//   $(".consolidationCalendarPopup").on("click", function (e) {
+//     e.stopPropagation();
+//   });
 
-});
+// });
 
 //custome calendar logic
-function setupCalendar({
-  toggle,
-  popup,
-  option,
-  dateText
-}) {
-  let selected = "Today";
+// function setupCalendar({
+//   toggle,
+//   popup,
+//   option,
+//   dateText
+// }) {
+//   let selected = "Today";
 
-  // Toggle popup
-  $(toggle).on("click", function (e) {
-    e.stopPropagation();
-    $(popup).toggleClass("hidden");
-  });
+//   // Toggle popup
+//   $(toggle).on("click", function (e) {
+//     e.stopPropagation();
+//     $(popup).toggleClass("hidden");
+//   });
 
-  // Option click
-  $(option).on("click", function (e) {
-    e.stopPropagation();
+//   // Option click
+//   $(option).on("click", function (e) {
+//     e.stopPropagation();
 
-    selected = $(this).data("value");
+//     selected = $(this).data("value");
 
-    // reset all checks
-    $(option).find("span:first-child")
-      .removeClass("text-dodger-blue")
-      .addClass("text-light-gray");
+//     // reset all checks
+//     $(option).find("span:first-child")
+//       .removeClass("text-dodger-blue")
+//       .addClass("text-light-gray");
 
-    // activate selected
-    $(this).find("span:first-child")
-      .removeClass("text-light-gray")
-      .addClass("text-dodger-blue");
+//     // activate selected
+//     $(this).find("span:first-child")
+//       .removeClass("text-light-gray")
+//       .addClass("text-dodger-blue");
 
-    // update date text (for Today / Week / Month)
-    if (selected !== "Custom") {
-      $(dateText).text(selected);
-    }
-  });
+//     // update date text (for Today / Week / Month)
+//     if (selected !== "Custom") {
+//       $(dateText).text(selected);
+//     }
+//   });
 
-  // Close on outside click
-  $(document).on("click", function () {
-    $(popup).addClass("hidden");
-  });
+//   // Close on outside click
+//   $(document).on("click", function () {
+//     $(popup).addClass("hidden");
+//   });
 
-  $(popup).on("click", function (e) {
-    e.stopPropagation();
-  });
-}
+//   $(popup).on("click", function (e) {
+//     e.stopPropagation();
+//   });
+// }
 
 //Zoom in and zoom out functionality
 $(document).ready(function () {
@@ -426,3 +426,124 @@ $(document).ready(function () {
   });
 });
 
+
+//calendar for js
+// $(document).ready(function () {
+
+//   /* ---- TOGGLE DROPDOWN ---- */
+//   $(".consolidationCalendarToggle").on("click", function (e) {
+//     e.stopPropagation();
+//     $(".consolidationCalendarPopup").toggleClass("hidden");
+//   });
+
+//   /* ---- OPTION CLICK ---- */
+//   $(".consolidation-cal-option").on("click", function (e) {
+//     e.stopPropagation();
+
+//     const value = $(this).data("value");
+
+//     // reset check icons
+//     $(".consolidation-cal-option span:first-child")
+//       .removeClass("text-dodger-blue")
+//       .addClass("text-light-gray");
+
+//     // activate selected
+//     $(this).find("span:first-child")
+//       .removeClass("text-light-gray")
+//       .addClass("text-dodger-blue");
+
+//     if (value === "Custom") {
+//       $(".consolidationDatePicker")
+//         .removeClass("hidden")
+//         .focus()
+//         .trigger("click");
+//     } else {
+//       $(".calendar-date-text").text(value);
+//       $(".consolidationCalendarPopup").addClass("hidden");
+//     }
+//   });
+
+//   /* ---- DATE SELECT ---- */
+//   $(".consolidationDatePicker").on("change", function () {
+//     $(".calendar-date-text").text(this.value);
+//     $(".consolidationCalendarPopup").addClass("hidden");
+//     $(this).addClass("hidden");
+//   });
+
+//   /* ---- CLOSE ON OUTSIDE CLICK ---- */
+//   $(document).on("click", function () {
+//     $(".consolidationCalendarPopup").addClass("hidden");
+//     $(".consolidationDatePicker").addClass("hidden");
+//   });
+
+//   $(".consolidationCalendarPopup, .consolidationDatePicker").on("click", function (e) {
+//     e.stopPropagation();
+//   });
+
+// });
+
+$(document).ready(function () {
+
+  const $wrapper = $(".consolidationCalendar");
+  const $toggle = $wrapper.find(".consolidationCalendarToggle");
+  const $popup = $wrapper.find(".consolidationCalendarPopup");
+  const $options = $wrapper.find(".consolidation-cal-option");
+  const $dateText = $wrapper.find(".calendar-date-text");
+  const $datePicker = $wrapper.find(".consolidationDatePicker");
+
+  /* ---- TOGGLE DROPDOWN ---- */
+  $toggle.on("click", function (e) {
+    e.stopPropagation();
+    $popup.toggleClass("hidden");
+  });
+
+  /* ---- OPTION CLICK ---- */
+  $options.on("click", function (e) {
+    e.stopPropagation();
+
+    const value = $(this).data("value");
+
+    // reset checks
+    $options.find("span:first-child")
+      .removeClass("text-dodger-blue")
+      .addClass("text-light-gray");
+
+    // activate selected
+    $(this).find("span:first-child")
+      .removeClass("text-light-gray")
+      .addClass("text-dodger-blue");
+
+    if (value === "Custom") {
+      // ✅ close dropdown
+      $popup.addClass("hidden");
+
+      // ✅ open date picker on top
+      $datePicker
+        .removeClass("hidden")
+        .focus()
+        .trigger("click");
+    } else {
+      $dateText.text(value);
+      $popup.addClass("hidden");
+    }
+  });
+
+
+  /* ---- DATE SELECT ---- */
+  $datePicker.on("change", function () {
+    $dateText.text(this.value);
+    $popup.addClass("hidden");
+    $datePicker.addClass("hidden");
+  });
+
+  /* ---- CLOSE ON OUTSIDE CLICK ---- */
+  $(document).on("click", function () {
+    $popup.addClass("hidden");
+    $datePicker.addClass("hidden");
+  });
+
+  $popup.add($datePicker).on("click", function (e) {
+    e.stopPropagation();
+  });
+
+});
